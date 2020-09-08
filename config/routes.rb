@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/user_login',to: 'login#user_login'
   get '/admin_login',to: 'login#admin_login'
+  get '/user_application',to: 'login#user_application'
   get '/user/new',to: 'users#user_new'
   get '/user/list',to: 'users#user_list'
   get '/user/deletion',to:  'users#user_deletion'
