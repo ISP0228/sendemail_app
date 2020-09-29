@@ -1,9 +1,10 @@
 <h1>ユーザー一覧</h1>
 
-<%= @user.name %>
-<%= @user.email %>
+<% @users.each do |user|%>
+  <p>name : <%= link_to user.name, user_path(user.id) %></p>
+<% end %>
 
-<p>ユーザーの追加</p>
-<p>ユーザーの削除</p>
+<p><%= link_to "ユーザーの追加",user_new_path</p>
+<p><%= link_to "ユーザーの削除",user_deletion_path</p>
 
 <p><%= link_to "管理者ページへ",admin_path %></p>

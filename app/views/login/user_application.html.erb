@@ -1,3 +1,7 @@
 <h1>申請ページ</h1>
 
-<p>メールを送信</p>
+<% @users.each do |user|%>
+  <p>name : <%= link_to user.name, user_path(user.id) %></p>
+<% end %>
+
+<%= f.submit '送信' %>
